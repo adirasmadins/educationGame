@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 20fb3363e741ade4dbd3bb9a0d831312
+timeCreated: 1515504089
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cookie
+  fontNames:
+  - Cookie
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
