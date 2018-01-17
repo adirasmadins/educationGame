@@ -112,110 +112,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &307763360
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 238.86523
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 400.0384
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 238.86523
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 400.0384
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224139813171468052, guid: 4e1d891c514461d4a93ac7cf34387531,
-        type: 2}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1384017075796170, guid: 4e1d891c514461d4a93ac7cf34387531, type: 2}
-      propertyPath: m_Name
-      value: Button
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 4e1d891c514461d4a93ac7cf34387531, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &400420618
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,10 +225,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355011d1f7b3d46438155cc6c5ab45e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fillBox: {fileID: 1057671828829738, guid: 01c8a2f9ccccf0c448d9a2b94e56db05, type: 2}
   buttonPrefab: {fileID: 1384017075796170, guid: 4e1d891c514461d4a93ac7cf34387531,
     type: 2}
   canvas: {fileID: 954900594}
   length: 14
+  test: CAT
 --- !u!114 &954900592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,9 +351,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 355011d1f7b3d46438155cc6c5ab45e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fillBox: {fileID: 0}
   buttonPrefab: {fileID: 0}
   canvas: {fileID: 0}
   length: 5
+  test: Doggy
 --- !u!1 &1134118173
 GameObject:
   m_ObjectHideFlags: 0
