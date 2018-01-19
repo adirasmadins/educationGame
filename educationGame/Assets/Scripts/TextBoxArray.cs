@@ -5,6 +5,7 @@ using UnityEngine;
 
 
 public class TextBoxArray : MonoBehaviour {
+	public GameObject checkChar;
 	[SerializeField]
 	private GameObject fillBox;
 	[SerializeField]
@@ -12,11 +13,11 @@ public class TextBoxArray : MonoBehaviour {
 	[SerializeField]
 	private Canvas canvas;
 
-	int length=14;
+	static int length=14;
 	private string alphabet="abcdefghijklmnopqrstuvwxyz";
-	string test = "CAT";
-	GameObject[] box = new GameObject[3];
-	GameObject[] button = new GameObject[14];
+	static string test = "cat";
+	GameObject[] box = new GameObject[test.Length];
+	GameObject[] button = new GameObject[length];
 	void Start()
 	{
 		
@@ -31,13 +32,17 @@ public class TextBoxArray : MonoBehaviour {
 
 		//Random  character
 		randomChar (button, test);
+
+		//on click event
 		foreach (GameObject btn in button) {
 			
 			btn.GetComponent<Button> ().onClick.AddListener (() => task (btn, box));
 		}
 
 
+		checkChar.GetComponent<Button> ().onClick.AddListener (() => check(box));
 	
+
 
 
 	}
@@ -47,7 +52,7 @@ public class TextBoxArray : MonoBehaviour {
 		foreach (GameObject inputfield in box) {
 
 			if(inputfield.GetComponent<InputField> ().isFocused == true){
-				for(int i=0; i<14;i++){
+				for(int i=0; i<length;i++){
 					//find null button to add the Char which is removed
 					if(button[i].GetComponentsInChildren<Text>()[0].text.Length==0){
 						button [i].GetComponentsInChildren<Text> () [0].text = inputfield.GetComponentsInChildren<Text> () [0].text;
@@ -63,8 +68,18 @@ public class TextBoxArray : MonoBehaviour {
 
 	}
 
+	void check(GameObject[] box){
+
+		string temp="";
+		for (int i = 0; i < box.Length; i++) {
+			temp = temp + box [i].GetComponentsInChildren<Text> () [0].text;
+		}
+		if (temp.Equals (test))
+			Debug.Log ("Ok");
+		else Debug.Log ("Wrong");
+	}
 	//event for one button
-	void task(GameObject button, GameObject[]	 box){
+	void task(GameObject button, GameObject[] box){
 		for (int i = 0; i < box.Length; i++) {
 			//Find null slot to fill the char
 			if (box [i].GetComponentsInChildren<Text> () [0].text.Length==0) {
@@ -91,7 +106,7 @@ public class TextBoxArray : MonoBehaviour {
 	}
 
 	void creatFillBox(GameObject[] box, int xposition){
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < box.Length; i++) {
 
 			box [i] = (GameObject)Instantiate (fillBox);
 			box [i].transform.SetParent (canvas.transform);
@@ -117,7 +132,7 @@ public class TextBoxArray : MonoBehaviour {
 		}
 
 		xposition = -150;
-		for (int i = 7; i <14; i++) {
+		for (int i = 7; i <length; i++) {
 
 			button[i] = (GameObject) Instantiate(buttonPrefab);
 
@@ -141,7 +156,7 @@ public class TextBoxArray : MonoBehaviour {
 				randomNumb = Random.Range (0, 13);
 			}
 			button [randomNumb].GetComponentInChildren<Text> ().text = test [i].ToString ();
-			Debug.Log (button [randomNumb].GetComponentInChildren<Text> ().text);
+
 			loopNumb.Add (randomNumb);
 		}
 	}
