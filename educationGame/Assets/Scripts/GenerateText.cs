@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class GenerateText : MonoBehaviour {
 
 	Text txt;
 	// Use this for initialization
 	void Start () {
-		int i = Random.Range (1, 100);
+		int i = UnityEngine.Random.Range (65, 91);
 		txt = gameObject.GetComponent<Text>();
-		txt.text = i.ToString();
+		txt.text = (Convert.ToChar (i)).ToString ();
 	}
 	
 	// Update is called once per frame
